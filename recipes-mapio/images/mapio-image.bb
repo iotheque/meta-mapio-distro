@@ -13,3 +13,9 @@ IMAGE_FEATURES += " \
 IMAGE_INSTALL += " \
     kernel-modules \
 "
+
+### Editors ###
+IMAGE_INSTALL += " \
+    nano \
+    vim \
+"
