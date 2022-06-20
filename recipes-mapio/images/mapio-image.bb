@@ -19,3 +19,8 @@ IMAGE_INSTALL += " \
     nano \
     vim \
 "
+
+### Docker ###
+IMAGE_INSTALL += " \
+    docker-moby \
+"
