@@ -23,4 +23,13 @@ IMAGE_INSTALL += " \
 ### Docker ###
 IMAGE_INSTALL += " \
     docker-moby \
+    python3-distutils \
+    python3-docker-compose \
+"
+
+### OTA ###
+IMAGE_INSTALL += " \
+    libubootenv \
+    u-boot \
+    rauc \
 "
