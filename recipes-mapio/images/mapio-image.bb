@@ -34,4 +34,10 @@ IMAGE_INSTALL += "\
     libubootenv \
     u-boot \
     rauc \
+    e2fsprogs-resize2fs \
+"
+
+### MAPIO APP ###
+IMAGE_INSTALL += "\
+    mapio-init \
 "
