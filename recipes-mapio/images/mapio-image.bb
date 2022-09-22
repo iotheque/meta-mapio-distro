@@ -45,4 +45,6 @@ IMAGE_INSTALL += "\
 ### MAPIO APP ###
 IMAGE_INSTALL += "\
     mapio-init \
+    mapio-docker-compose \
+    mapio-display \
 "
