@@ -17,6 +17,8 @@ IMAGE_FEATURES += "\
 # Kernel
 IMAGE_INSTALL += "\
     kernel-modules \
+    libgpiod \
+    libgpiod-tools \
 "
 
 ### Editors ###
