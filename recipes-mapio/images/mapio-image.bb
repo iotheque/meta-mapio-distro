@@ -41,6 +41,13 @@ IMAGE_INSTALL += "\
     e2fsprogs-resize2fs \
 "
 
+### Bench ###
+IMAGE_INSTALL += "\
+    bluez5 \
+    iperf3 \
+    i2c-tools \
+"
+
 ### MAPIO APP ###
 IMAGE_INSTALL += "\
     mapio-init \
