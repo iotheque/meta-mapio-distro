@@ -7,7 +7,6 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0;md5=80
 inherit core-image
 
 IMAGE_INSTALL:append = " tzdata"
-DEFAULT_TIMEZONE = "Europe/Paris"
 
 # Network
 IMAGE_FEATURES += "\
