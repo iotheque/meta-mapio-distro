@@ -6,6 +6,8 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0;md5=80
 
 inherit core-image
 
+IMAGE_INSTALL:append = " tzdata"
+
 # Network
 IMAGE_FEATURES += "\
     ssh-server-openssh \
@@ -14,6 +16,8 @@ IMAGE_FEATURES += "\
 # Kernel
 IMAGE_INSTALL += "\
     kernel-modules \
+    libgpiod \
+    libgpiod-tools \
 "
 
 ### Editors ###
@@ -34,4 +38,21 @@ IMAGE_INSTALL += "\
     libubootenv \
     u-boot \
     rauc \
+    e2fsprogs-resize2fs \
+"
+
+### Bench ###
+IMAGE_INSTALL += "\
+    bluez5 \
+    iperf3 \
+    i2c-tools \
+"
+
+### MAPIO APP ###
+IMAGE_INSTALL += "\
+    mapio-init \
+    mapio-docker-compose \
+    mapio-display \
+    mapio-gpio-ha \
+    mapio-setup-wizard \
 "
