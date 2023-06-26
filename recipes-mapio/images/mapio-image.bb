@@ -53,4 +53,5 @@ IMAGE_INSTALL += "\
     mapio-init \
     mapio-docker-compose \
     mapio-display \
+    mapio-gpio-ha \
 "
