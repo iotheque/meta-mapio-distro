@@ -54,4 +54,5 @@ IMAGE_INSTALL += "\
     mapio-docker-compose \
     mapio-display \
     mapio-gpio-ha \
+    mapio-setup-wizard \
 "
