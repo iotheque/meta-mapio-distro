@@ -1,0 +1,17 @@
+[Unit]
+Description=WPA supplicant daemon (interface-specific version)
+Requires=sys-subsystem-net-devices-wlan0.device
+After=sys-subsystem-net-devices-wlan0.device
+Before=network.target
+Wants=network.target
+
+# NetworkManager users will probably want the dbus version instead.
+
+[Service]
+Type=simple
+ExecStartPre=/usr/sbin/iw dev wlan0 interface add wlan0_ap type __ap
+ExecStart=/usr/sbin/wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant-ap.conf -i wlan0_ap
+ExecStopPost=/usr/sbin/iw dev wlan0_ap del
+
+[Install]
+WantedBy=multi-user.target
