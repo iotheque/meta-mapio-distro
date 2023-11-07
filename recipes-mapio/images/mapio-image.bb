@@ -55,4 +55,6 @@ IMAGE_INSTALL += "\
     mapio-display \
     mapio-gpio-ha \
     mapio-setup-wizard \
+    python3-pyserial \
+    python3-intelhex \
 "
