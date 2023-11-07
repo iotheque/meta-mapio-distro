@@ -50,6 +50,9 @@ IMAGE_INSTALL += "\
     bluez5 \
     iperf3 \
     i2c-tools \
+    systemd-analyze \
+    screen \
+    zram \
 "
 
 ### MAPIO APP ###
