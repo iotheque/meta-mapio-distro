@@ -61,7 +61,8 @@ IMAGE_INSTALL += "\
     mapio-docker-compose \
     mapio-display \
     mapio-gpio-ha \
-    mapio-setup-wizard \
     python3-pyserial \
     python3-intelhex \
+    mapio-webserver-back \
+    mapio-webserver-front \
 "
