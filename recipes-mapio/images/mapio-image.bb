@@ -1,10 +1,14 @@
 SUMMARY = "MAPIO image base"
 DESCRIPTION = "Install all needed applicative tools for MAPIO gateway"
 HOMEPAGE = "https://github.com/pcurt/meta-mapio-distro"
-LICENSE = "GPL-2.0"
-LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
+LICENSE = "GPL-2.0-only"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0-only;md5=801f80980d171dd6425610833a22dbe6"
 
-inherit core-image
+inherit core-image extrausers
+
+EXTRA_USERS_PARAMS = "\
+    usermod -p '${PASSWD_ROOT}' root; \
+    "
 
 IMAGE_INSTALL:append = " tzdata"
 
@@ -46,6 +50,9 @@ IMAGE_INSTALL += "\
     bluez5 \
     iperf3 \
     i2c-tools \
+    systemd-analyze \
+    screen \
+    zram \
 "
 
 ### MAPIO APP ###
@@ -54,5 +61,7 @@ IMAGE_INSTALL += "\
     mapio-docker-compose \
     mapio-display \
     mapio-gpio-ha \
-    mapio-setup-wizard \
+    mapio-tools \
+    mapio-webserver-back \
+    mapio-webserver-front \
 "
