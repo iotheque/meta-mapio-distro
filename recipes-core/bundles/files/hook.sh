@@ -15,7 +15,7 @@ case "$1" in
                 if [ -e "/tmp/wpa_supplicant-wlan0.conf" ]; then
                         # Restore
                         cp /tmp/wpa_supplicant-wlan0.conf "$RAUC_SLOT_MOUNT_POINT"/etc/wpa_supplicant/
-                        ln -s "$RAUC_SLOT_MOUNT_POINT"/lib/systemd/system/wpa_supplicant@.service "$RAUC_SLOT_MOUNT_POINT"/etc/systemd/system/multi-user.target.wants/wpa_supplicant@wlan0.service
+                        ln -s /lib/systemd/system/wpa_supplicant@.service "$RAUC_SLOT_MOUNT_POINT"/etc/systemd/system/multi-user.target.wants/wpa_supplicant@wlan0.service
                 fi
                 # Check if .ssh/authorized_keys have been backuped
                 if [ -e "/tmp/authorized_keys" ]; then
