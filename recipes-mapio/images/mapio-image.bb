@@ -16,6 +16,9 @@ IMAGE_INSTALL:append = " tzdata"
 IMAGE_FEATURES += "\
     ssh-server-openssh \
 "
+IMAGE_INSTALL += "\
+    iptables \
+"
 
 # Kernel
 IMAGE_INSTALL += "\
