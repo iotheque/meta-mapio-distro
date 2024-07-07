@@ -4,3 +4,4 @@ Name=wlan0_ap
 [Network]
 Address=10.50.0.1/24
 DHCPServer=yes
+MulticastDNS=yes

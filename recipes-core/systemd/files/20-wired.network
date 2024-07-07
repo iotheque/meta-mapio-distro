@@ -1,6 +1,7 @@
 [Match]
-Name=wlan0
+Name=eth0
 
 [Network]
 DHCP=ipv4
 MulticastDNS=yes
+
