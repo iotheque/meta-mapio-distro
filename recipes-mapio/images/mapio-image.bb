@@ -8,7 +8,7 @@ inherit core-image extrausers
 
 EXTRA_USERS_PARAMS = "\
     usermod -p '${PASSWD_ROOT}' root; \
-    "
+"
 
 IMAGE_INSTALL:append = " tzdata"
 
@@ -67,4 +67,5 @@ IMAGE_INSTALL += "\
     mapio-tools \
     mapio-webserver-back \
     mapio-webserver-front \
+    python3-hivesense2mqtt \
 "
