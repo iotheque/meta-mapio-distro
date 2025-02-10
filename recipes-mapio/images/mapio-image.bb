@@ -36,24 +36,13 @@ IMAGE_INSTALL += "\
 ### Docker ###
 IMAGE_INSTALL += "\
     docker-moby \
-    python3-distutils \
-    python3-docker-compose \
-"
-
-### OTA ###
-IMAGE_INSTALL += "\
-    libubootenv \
-    u-boot \
-    rauc \
-    e2fsprogs-resize2fs \
+    docker-compose \
 "
 
 ### Bench ###
 IMAGE_INSTALL += "\
-    bluez5 \
-    iperf3 \
+    e2fsprogs-resize2fs \
     i2c-tools \
-    systemd-analyze \
     screen \
     zram \
 "

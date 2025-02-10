@@ -5,6 +5,8 @@ HOMEPAGE = "https://github.com/iotheque/meta-mapio-distro"
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0-only;md5=801f80980d171dd6425610833a22dbe6"
 
+PV = "${MAPIO_OS_VERSION}"
+
 SRC_URI:append = " file://hook.sh"
 
 inherit bundle
@@ -18,6 +20,8 @@ RAUC_SLOT_rootfs ?= "mapio-image"
 
 RAUC_KEY_FILE = "${SECRET_PATH}/development-1.key.pem"
 RAUC_CERT_FILE = "${SECRET_PATH}/development-1.cert.pem"
+
+RAUC_BUNDLE_FORMAT = "plain"
 
 RAUC_BUNDLE_HOOKS[file] = "hook.sh"
 RAUC_SLOT_rootfs[hooks] = "pre-install;post-install"
