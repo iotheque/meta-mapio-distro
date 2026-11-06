@@ -7,7 +7,7 @@ SRC_URI:append = " \
 
 do_install:append () {
     install -d ${D}${sysconfdir}/nginx/
-    install -m 0644 ${WORKDIR}/nginx.conf ${D}/${sysconfdir}/nginx/nginx.conf
+    install -m 0644 ${UNPACKDIR}/nginx.conf ${D}/${sysconfdir}/nginx/nginx.conf
 }
 
 FILES:${PN} += "${sysconfdir}/nginx/nginx.conf"

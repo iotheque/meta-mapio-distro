@@ -11,6 +11,7 @@ EXTRA_USERS_PARAMS = "\
 "
 
 IMAGE_INSTALL:append = " tzdata"
+IMAGE_INSTALL:append = " tzdata-europe"
 
 # Network
 IMAGE_FEATURES += "\
@@ -30,7 +31,7 @@ IMAGE_INSTALL += "\
 ### Editors ###
 IMAGE_INSTALL += "\
     nano \
-    vim \
+    vim-tiny \
 "
 
 ### Docker ###
@@ -42,7 +43,6 @@ IMAGE_INSTALL += "\
 ### Bench ###
 IMAGE_INSTALL += "\
     e2fsprogs-resize2fs \
-    i2c-tools \
     screen \
     zram \
 "
@@ -56,5 +56,4 @@ IMAGE_INSTALL += "\
     mapio-tools \
     mapio-webserver-back \
     mapio-webserver-front \
-    python3-hivesense2mqtt \
 "
