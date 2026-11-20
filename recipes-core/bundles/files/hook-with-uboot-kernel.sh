@@ -1,7 +1,11 @@
 #!/bin/sh
-
 case "$1" in
         slot-pre-install)
+                if [ "$RAUC_SLOT_NAME" != "rootfs.0" ]; then
+                        echo "Update refused: the system must be booted on rootfs B." >&2
+                        echo "Current boot slot: $RAUC_SLOT_NAME"
+                        exit 1
+                fi
                 # Check if wlan0 service is enabled
                 if [ -e "/etc/systemd/system/multi-user.target.wants/wpa_supplicant@wlan0.service" ]; then
                         # Backup WIFI cretentials
@@ -28,6 +32,7 @@ case "$1" in
                 cp "$RAUC_BUNDLE_MOUNT_POINT"/Image /boot/Image
                 cp "$RAUC_BUNDLE_MOUNT_POINT"/bcm2711-rpi-cm4-io.dtb /boot/bcm2711-rpi-cm4-io.dtb
                 cp "$RAUC_BUNDLE_MOUNT_POINT"/boot.scr /boot/boot.scr
+                rm -f /boot/uboot.env || exit 1
                 ;;
         *)
                 exit 1
